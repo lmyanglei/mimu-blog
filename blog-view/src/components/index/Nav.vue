@@ -1,5 +1,6 @@
 <template>
-	<div ref="nav" class="ui fixed inverted stackable pointing menu" :class="{'transparent':$route.name==='home' && clientSize.clientWidth>768}">
+<!--	<div ref="nav" class="ui fixed inverted stackable pointing menu" :class="{'transparent':$route.name==='home' && clientSize.clientWidth>768}">-->
+  <div ref="nav" class="ui fixed inverted stackable pointing menu">
 		<div class="ui container">
 			<router-link to="/">
 				<h3 class="ui header item m-blue">{{ blogName }}</h3>
@@ -22,7 +23,7 @@
 				<i class="comment alternate outline icon"></i>动态
 			</router-link>
 			<router-link to="/friends" class="item" :class="{'m-mobile-hide': mobileHide,'active':$route.name==='friends'}">
-				<i class="users icon"></i>友人帐
+				<i class="users icon"></i>小伙伴们
 			</router-link>
 			<router-link to="/about" class="item" :class="{'m-mobile-hide': mobileHide,'active':$route.name==='about'}">
 				<i class="info icon"></i>关于我
@@ -80,13 +81,13 @@
 			//监听页面滚动位置，改变导航栏的显示
 			window.addEventListener('scroll', () => {
 				//首页且不是移动端
-				if (this.$route.name === 'home' && this.clientSize.clientWidth > 768) {
-					if (window.scrollY > this.clientSize.clientHeight / 2) {
-						this.$refs.nav.classList.remove('transparent')
-					} else {
-						this.$refs.nav.classList.add('transparent')
-					}
-				}
+				// if (this.$route.name === 'home' && this.clientSize.clientWidth > 768) {
+				// 	if (window.scrollY > this.clientSize.clientHeight / 2) {
+				// 		this.$refs.nav.classList.remove('transparent')
+				// 	} else {
+				// 		this.$refs.nav.classList.add('transparent')
+				// 	}
+				// }
 			})
 			//监听点击事件，收起导航菜单
 			document.addEventListener('click', (e) => {

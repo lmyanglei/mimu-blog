@@ -1,4 +1,5 @@
 module.exports = {
+	publicPath:'/blog/',
 	configureWebpack: {
 		resolve: {
 			alias: {

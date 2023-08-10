@@ -55,7 +55,7 @@ const routes = [
 				path: '/friends',
 				name: 'friends',
 				component: () => import('@/views/friends/Friends'),
-				meta: {title: '友人帐'}
+				meta: {title: '小伙伴'}
 			},
 			{
 				path: '/about',
@@ -69,7 +69,8 @@ const routes = [
 
 const router = new VueRouter({
 	mode: 'history',
-	base: process.env.BASE_URL,
+	// base: process.env.BASE_URL,
+	base: '/blog',
 	routes
 })
 
